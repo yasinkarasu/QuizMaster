@@ -1,19 +1,10 @@
-# Unity-generated files
+# Unity Gereksiz Dosyaları
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
 [Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-[Mm]emoryCaptures/
-
-# Asset meta files
-*.pidb.meta
-*.pidb
-
-# Visual Studio temporary files
+[Uu]ser[Ss]ettings/
 *.csproj
-*.unityproj
 *.sln
 *.suo
 *.tmp
@@ -22,10 +13,25 @@
 *.pidb
 *.booproj
 *.svd
+*.pdb
+*.mdb
+*.opendb
+*.vc.db
 
-# OS generated files
+# Android ve Önbellek Dosyaları
+.android/
+.cache/
+.idea/
+gradle/
+build/
+*.iml
+*.apk
+*.unitypackage
+.continue/
+dev_data/
+
+
+
+# Diğer Geçici Dosyalar
 .DS_Store
 Thumbs.db
-
-# Files generated during Unity Cloud builds
-unity-cloud-build-manifest.json
