@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
   m_Name: Questions 1
   m_EditorClassIdentifier: 
-  Question: "D\xFCnyan\u0131n en b\xFCy\xFCk okyanusu hangisidir?\n"
+  question: "DNA\u2019n\u0131n \xE7ift sarmal yap\u0131s\u0131n\u0131 kim ke\u015Ffetmi\u015Ftir?"
+  answers:
+  - Albert Einstein
+  - Rosalind Franklin
+  - Watson ve Crick
+  - Charles Darwin
+  correctAnswersIndex: 2

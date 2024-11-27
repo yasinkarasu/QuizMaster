@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
   m_Name: Questions 4
   m_EditorClassIdentifier: 
-  Question: "T\xFCrkiye\u2019nin ba\u015Fkenti neresidir?\n"
+  question: "Hangisi Avrupa k\u0131tas\u0131nda yer almaz?\n"
+  answers:
+  - Almanya
+  - "\u0130svi\xE7re"
+  - Meksika
+  - Belarus
+  correctAnswersIndex: 2

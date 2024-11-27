@@ -12,4 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
   m_Name: Questions 5
   m_EditorClassIdentifier: 
-  Question: "DNA\u2019n\u0131n \xE7ift sarmal yap\u0131s\u0131n\u0131 kim ke\u015Ffetmi\u015Ftir?"
+  question: "Matematikte Pi say\u0131s\u0131 yakla\u015F\u0131k olarak ka\xE7t\u0131r?\n"
+  answers:
+  - 2.14
+  - 3.14
+  - 4.14
+  - 5.14
+  correctAnswersIndex: 1

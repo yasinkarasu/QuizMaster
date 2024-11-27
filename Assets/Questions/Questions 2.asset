@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
   m_Name: Questions 2
   m_EditorClassIdentifier: 
-  Question: "Hangisi bir meyve de\u011Fildir?\n"
+  question: "Atat\xFCrk hangi y\u0131l do\u011Fmu\u015Ftur?\n"
+  answers:
+  - 1881
+  - 1900
+  - 1919
+  - 1885

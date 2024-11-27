@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
   m_Name: Questions 3
   m_EditorClassIdentifier: 
-  Question: "Hangisi d\xF6rt mevsim ya\u015Fanabilen bir \xFClkenin \xF6zelli\u011Fidir?"
+  question: "D\xFCnyan\u0131n en derin yeri neresi olarak bilinir?\n"
+  answers:
+  - "Mariana \xC7ukuru "
+  - "Everest Da\u011F\u0131"
+  - "Challenger \xC7ukuru "
+  - "Pasifik \xC7ukuru"
