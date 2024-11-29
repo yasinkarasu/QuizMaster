@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
-  m_Name: Questions 5
+  m_Name: Questions 18
   m_EditorClassIdentifier: 
-  question: "Matematikte Pi say\u0131s\u0131 yakla\u015F\u0131k olarak ka\xE7t\u0131r?\n"
+  question: "Osmanl\u0131 Devleti\u2019nde ilk matbaan\u0131n kurulmas\u0131 hangi
+    padi\u015Fah d\xF6neminde ger\xE7ekle\u015Fmi\u015Ftir?\n\n"
   answers:
-  - 3.13
-  - 3.14
-  - 3.15
-  - 3.16
-  correctAnswersIndex: 1
+  - I. Mahmut
+  - II. Mahmut
+  - III. Ahmet
+  - III. Selim
+  correctAnswersIndex: 2

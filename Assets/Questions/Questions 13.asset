@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
-  m_Name: Questions 5
+  m_Name: Questions 13
   m_EditorClassIdentifier: 
-  question: "Matematikte Pi say\u0131s\u0131 yakla\u015F\u0131k olarak ka\xE7t\u0131r?\n"
+  question: "Karadeniz\u2019in tuzluluk oran\u0131n\u0131n d\xFC\u015F\xFCk olmas\u0131n\u0131n
+    temel nedeni nedir?\n"
   answers:
-  - 3.13
-  - 3.14
-  - 3.15
-  - 3.16
-  correctAnswersIndex: 1
+  - "Y\xFCz\xF6l\xE7\xFCm\xFCn\xFCn k\xFC\xE7\xFCk olmas\u0131"
+  - "Bol ya\u011F\u0131\u015F almas\u0131 "
+  - "\xC7ok say\u0131da tatl\u0131 su akarsuyuyla beslenmesi"
+  - "Derinli\u011Finin fazla olmas\u0131  "
+  correctAnswersIndex: 2

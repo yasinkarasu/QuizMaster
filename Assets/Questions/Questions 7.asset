@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b0d022e8e9b9ffe4a849633f4f318ea3, type: 3}
-  m_Name: Questions 5
+  m_Name: Questions 7
   m_EditorClassIdentifier: 
-  question: "Matematikte Pi say\u0131s\u0131 yakla\u015F\u0131k olarak ka\xE7t\u0131r?\n"
+  question: "Osmanl\u0131 Devleti\u2019nde \u201CVaka-i Hayriye\u201D olarak bilinen
+    olay nedir?\n"
   answers:
-  - 3.13
-  - 3.14
-  - 3.15
-  - 3.16
-  correctAnswersIndex: 1
+  - "Yeni\xE7eri Oca\u011F\u0131\u2019n\u0131n kald\u0131r\u0131lmas\u0131"
+  - "Tanzimat Ferman\u0131\u2019n\u0131n ilan\u0131 "
+  - "Halifeli\u011Fin kald\u0131r\u0131lmas\u0131"
+  - "Me\u015Frutiyetin ilan\u0131  "
+  correctAnswersIndex: 0
