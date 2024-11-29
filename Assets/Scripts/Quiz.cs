@@ -105,7 +105,6 @@ public class Quiz : MonoBehaviour
 
 public class Quiz : MonoBehaviour
 {
-
     [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] List<QuestionSO> questions = new List<QuestionSO>();
@@ -113,32 +112,38 @@ public class Quiz : MonoBehaviour
 
     [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
-    int correctAnswersIndex;
+    int correctAnswerIndex;
     bool hasAnsweredEarly;
 
     [Header("Button Colors")]
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
-    
+
     [Header("Timer")]
     [SerializeField] Image timerImage;
     Timer timer;
 
+    [Header("Scoring")]
+    [SerializeField] TextMeshProUGUI scoreText;
+    ScoreKeeper scoreKeeper;
+
     void Start()
     {
         timer = FindAnyObjectByType<Timer>();
-
+        scoreKeeper = FindAnyObjectByType<ScoreKeeper>();
+        GetNextQuestion();
     }
+
     void Update()
     {
         timerImage.fillAmount = timer.fillFraction;
-        if(timer.loadNextQuestion)
+        if (timer.loadNextQuestion)
         {
             hasAnsweredEarly = false;
             GetNextQuestion();
             timer.loadNextQuestion = false;
         }
-        else if(!hasAnsweredEarly && !timer.isAnsweringQuestion)
+        else if (!hasAnsweredEarly && !timer.isAnsweringQuestion)
         {
             DisplayAnswer(-1);
             SetButtonState(false);
@@ -151,51 +156,59 @@ public class Quiz : MonoBehaviour
         DisplayAnswer(index);
         SetButtonState(false);
         timer.CancelTimer();
+
+        // Skoru güncelle
+        scoreText.text = "Score: " + scoreKeeper.CalculateScore() + "%";
     }
+
     void DisplayAnswer(int index)
     {
         Image buttonImage;
 
-        // Doğru cevap kontrolü
         if (index == currentQuestion.GetCorrectAnswerIndex())
         {
             questionText.text = "Correct!";
             buttonImage = answerButtons[index].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
+            scoreKeeper.IncrementCorrectAnswer(); // Doğru cevabı artır
         }
         else
         {
-            correctAnswersIndex = currentQuestion.GetCorrectAnswerIndex();
-            string correctAnswer = currentQuestion.GetAnswer(correctAnswersIndex);
+            correctAnswerIndex = currentQuestion.GetCorrectAnswerIndex();
+            string correctAnswer = currentQuestion.GetAnswer(correctAnswerIndex);
             questionText.text = "Sorry, the correct answer was:\n" + correctAnswer;
-            buttonImage = answerButtons[correctAnswersIndex].GetComponent<Image>();
+            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
             buttonImage.sprite = correctAnswerSprite;
         }
     }
 
-    // Yeni soruyu almak ve butonları yeniden etkinleştirmek için
     void GetNextQuestion()
     {
-        if(questions.Count > 0)
+        if (questions.Count > 0)
         {
-            SetButtonState(true);  // Butonları yeniden etkinleştir
-            SetDefaultButtonSprites();  // Butonları varsayılan sprite'larla sıfırla
+            SetButtonState(true);
+            SetDefaultButtonSprites();
+
+            // Yeni soruyu al ve göster
             GetRandomQuestion();
             DisplayQuestion();
+
+            scoreKeeper.IncrementQuestionsSeen(); // Görülen soru sayısını artır
+        }
+        else
+        {
+            questionText.text = "Quiz Complete!";
+            SetButtonState(false);
         }
     }
+
     void GetRandomQuestion()
     {
         int index = Random.Range(0, questions.Count);
         currentQuestion = questions[index];
-        if(questions.Contains(currentQuestion))
-        {
-            questions.Contains(currentQuestion);
-        }
-        questions.Remove(currentQuestion);
+        questions.RemoveAt(index); // Seçilen soruyu listeden çıkar
     }
 
-    // Soruyu görüntülemek için fonksiyon
     void DisplayQuestion()
     {
         questionText.text = currentQuestion.GetQuestion();
@@ -207,22 +220,20 @@ public class Quiz : MonoBehaviour
         }
     }
 
-    // Butonların etkinlik durumunu ayarlamak için fonksiyon
     void SetButtonState(bool state)
     {
-        for (int i = 0; i < answerButtons.Length; i++)
+        foreach (GameObject button in answerButtons)
         {
-            Button button = answerButtons[i].GetComponent<Button>();
-            button.interactable = state;
+            Button btn = button.GetComponent<Button>();
+            btn.interactable = state;
         }
     }
 
-    // Butonları varsayılan sprite'lara sıfırlamak için fonksiyon
     void SetDefaultButtonSprites()
     {
-        for (int i = 0; i < answerButtons.Length; i++)
+        foreach (GameObject button in answerButtons)
         {
-            Image buttonImage = answerButtons[i].GetComponent<Image>();
+            Image buttonImage = button.GetComponent<Image>();
             buttonImage.sprite = defaultAnswerSprite;
         }
     }
