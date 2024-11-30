@@ -70,8 +70,7 @@ Below are two images showcasing **Quiz Master** gameplay:
 ## 📦 Download the Game  
 Ready to play **Quiz Master**? Download the game using the link below:  
 
-[**Download Quiz Master .exe**](#)  
-([*-*](https://github.com/yasinkarasu/QuizMaster/releases/tag/V1.0.0))  
+[Download(Windows .exe)](https://github.com/yasinkarasu/QuizMaster/releases/tag/V1.0.0)
 
 ---
 
