@@ -71,13 +71,13 @@ Below are two images showcasing **Quiz Master** gameplay:
 Ready to play **Quiz Master**? Download the game using the link below:  
 
 [**Download Quiz Master .exe**](#)  
-(*-*)  
+([*-*](https://github.com/yasinkarasu/QuizMaster/releases/tag/V1.0.0))  
 
 ---
 
 ## 📚 Developer Notes  
 - **Developer**: This game was created using Unity and features a simple yet engaging quiz system.  
-- **Planned Updates**: Future features may include additional question categories, difficulty levels, and multiplayer support.  
+- **Planned Updates**: Future features may include additional question categories, difficulty levels.  
 
 ---
 
