@@ -60,10 +60,10 @@
 Below are two images showcasing **Quiz Master** gameplay:
 
 ### Gameplay Example 1:  
-([Screenshot1](https://github.com/yasinkarasu/QuizMaster/blob/master/docs/oyunici.png)  
+![Screenshot1](https://github.com/yasinkarasu/QuizMaster/blob/master/docs/oyunici.png)  
 
 ### Gameplay Example 2:  
-([Screenshot1](https://github.com/yasinkarasu/QuizMaster/blob/master/docs/oyunson.png) 
+![Screenshot1](https://github.com/yasinkarasu/QuizMaster/blob/master/docs/oyunson.png) 
 
 ---
 
